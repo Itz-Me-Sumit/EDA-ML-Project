@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 
 # For MICE: to Impute Missing values
+from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer, KNNImputer
 
 # IsolationForest: For Outlier Detection
