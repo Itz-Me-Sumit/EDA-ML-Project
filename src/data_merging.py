@@ -19,11 +19,11 @@ class OListDataProcessor():
             "translation": "product_category_name_translation.csv"
         }
         self.dataframes ={} # Data will Stored here after Loading
-        self.master_df = None # Finaled Merged Data
+        self.master_df = None # Final Merged Data
 
     def load_raw_data(self):
         # Loads all CSV files into Dictionary
-        print("Loadind raw data files...")
+        print("Loading raw data files...")
         
         for name , filename in self.files.items():
             filepath = os.path.join(self.raw_dir , filename)
