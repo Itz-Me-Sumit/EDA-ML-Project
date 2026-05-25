@@ -25,7 +25,7 @@ REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 class BivariateAnalyzer:
     """
-    Day 5 — Bivariate & Multivariate Analysis.
+    Day 5 - Bivariate & Multivariate Analysis.
 
     Pipeline Steps:
         1. load_data()          - Load featured_dataset.csv
@@ -37,18 +37,18 @@ class BivariateAnalyzer:
         7. save_report()        - All results to reports/bivariate/
         8. run_full_pipeline()  - Orchestrate all steps in one call
 
-    ── Math Cheatsheet ──────────────────────────────────────────────────────
-    Pearson r   = Σ[(Xi - X̄)(Yi - Ȳ)] / (n·σx·σy)
+    --- Math Cheatsheet ---------------------------------------------------------
+    Pearson r   = Sum[(Xi - X_mean)(Yi - Y_mean)] / (n * sigma_x * sigma_y)
                   Measures LINEAR relationship. Assumes normality.
                   Range: -1 to +1. Sensitive to outliers.
 
-    Spearman ρ  = Pearson r applied on RANKS of X and Y
+    Spearman rho = Pearson r applied on RANKS of X and Y
                   Measures MONOTONIC relationship (not just linear).
                   Use when: data is skewed, has outliers, or is ordinal.
-                  Rule of thumb: price/delay columns → use Spearman.
+                  Rule of thumb: price/delay columns -> use Spearman.
 
-    Cramér's V  = sqrt(χ² / (n · min(r-1, c-1)))
-                  χ² = chi-square statistic from contingency table.
+    Cramer's V  = sqrt(chi^2 / (n * min(r-1, c-1)))
+                  chi^2 = chi-square statistic from contingency table.
                   Range: 0 (no association) to 1 (perfect association).
                   Use for: two categorical columns (state vs category etc.)
 
@@ -56,13 +56,13 @@ class BivariateAnalyzer:
                   Mathematically identical to Pearson, but semantically
                   correct when one variable is a flag (is_late_delivery etc.)
 
-    VIF         = 1 / (1 - R²_i)
-                  R²_i = how well column i is predicted by ALL other columns.
-                  VIF > 5  → moderate multicollinearity (investigate)
-                  VIF > 10 → severe multicollinearity (drop or combine)
+    VIF         = 1 / (1 - R^2_i)
+                  R^2_i = how well column i is predicted by ALL other columns.
+                  VIF > 5  -> moderate multicollinearity (investigate)
+                  VIF > 10 -> severe multicollinearity (drop or combine)
                   Why it matters: multicollinear features make linear model
                   coefficients unstable and uninterpretable.
-    ─────────────────────────────────────────────────────────────────────────
+    -----------------------------------------------------------------------------
     """
 
     # Columns to treat as categorical even if encoded as int
