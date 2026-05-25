@@ -1,0 +1,33 @@
+feature,vif,flag
+actual_delivery_days,inf,🔴 SEVERE ≥10
+estimated_delivery_days,inf,🔴 SEVERE ≥10
+delivery_delay_days,inf,🔴 SEVERE ≥10
+seller_zip_lng,332.75,🔴 SEVERE ≥10
+customer_zip_lng,173.23,🔴 SEVERE ≥10
+seller_zip_lat,94.37,🔴 SEVERE ≥10
+time_decay_weight,49.49,🔴 SEVERE ≥10
+customer_zip_lat,42.11,🔴 SEVERE ≥10
+product_name_lenght,26.23,🔴 SEVERE ≥10
+purchase_quarter,17.92,🔴 SEVERE ≥10
+product_width_cm,8.0,🟠 HIGH ≥5
+customer_seller_distance_km,7.84,🟠 HIGH ≥5
+product_length_cm,7.0,🟠 HIGH ≥5
+freight_value,6.3,🟠 HIGH ≥5
+customer_zip_code_prefix,4.38,✅ ok
+product_height_cm,3.96,✅ ok
+product_weight_g,3.63,✅ ok
+payment_sequential,3.59,✅ ok
+price,3.46,✅ ok
+payment_value,3.26,✅ ok
+purchase_month_sin,3.13,✅ ok
+product_photos_qty,2.84,✅ ok
+product_description_lenght,2.69,✅ ok
+payment_installments,2.48,✅ ok
+seller_zip_code_prefix,2.15,✅ ok
+carrier_pickup_delay_hrs,2.15,✅ ok
+purchase_hour_sin,1.48,✅ ok
+approval_delay_hrs,1.33,✅ ok
+purchase_hour_cos,1.24,✅ ok
+purchase_month_cos,1.23,✅ ok
+purchase_dayofweek_sin,1.03,✅ ok
+purchase_dayofweek_cos,1.02,✅ ok

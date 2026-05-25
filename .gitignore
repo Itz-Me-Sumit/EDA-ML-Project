@@ -4,3 +4,5 @@ __pycache__/
 venv/
 data/raw/
 data/processed/
+rough.py
+rough2.py

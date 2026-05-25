@@ -1,0 +1,26 @@
+Day 5 — Bivariate Analysis Summary
+Run at: 20260525_194627
+Dataset: featured_dataset.csv
+Shape: (119143, 57)
+
+Top 5 Spearman correlations with 'review_score':
+  delivery_delay_days                        ρ=0.151
+  carrier_pickup_delay_hrs                   ρ=0.105
+  payment_value                              ρ=0.072
+  customer_seller_distance_km                ρ=0.066
+  freight_value                              ρ=0.046
+
+VIF: 10 severe (≥10), 4 high (5–10)
+  SEVERE: actual_delivery_days (VIF=inf)
+  SEVERE: estimated_delivery_days (VIF=inf)
+  SEVERE: delivery_delay_days (VIF=inf)
+  SEVERE: seller_zip_lng (VIF=332.8)
+  SEVERE: customer_zip_lng (VIF=173.2)
+  SEVERE: seller_zip_lat (VIF=94.4)
+  SEVERE: time_decay_weight (VIF=49.5)
+  SEVERE: customer_zip_lat (VIF=42.1)
+  SEVERE: product_name_lenght (VIF=26.2)
+  SEVERE: purchase_quarter (VIF=17.9)
+
+Files saved: pearson_matrix.csv, spearman_matrix.csv, vif_scores.csv, point_biserial.csv, cramers_v_matrix.csv
+Plots dir  : C:\Users\sumit\OneDrive\Desktop\Projects\EDA + ML Project\data\reports\bivariate\plots
