@@ -1,0 +1,75 @@
+Day 6 — Hypothesis Testing Summary
+Run at: 20260529_135406
+Dataset: featured_dataset.csv
+Shape: (119143, 57)
+Alpha (significance level): 0.05
+
+Total tests run      : 7
+Significant results  : 6
+Non-significant      : 1
+
+────────────────────────────────────────────────────────────
+FINDINGS
+────────────────────────────────────────────────────────────
+
+BQ1: Late deliveries lower review scores
+  H₀: Review scores are equal for late vs on-time deliveries
+  Test     : Mann-Whitney U
+  p-value  : 0.0
+  Verdict  : ✅ SIGNIFICANT
+  Effect   : Large
+
+BQ2: Delivery delay varies by customer state
+  H₀: Delivery delay is equal across all states
+  Test     : Kruskal-Wallis
+  p-value  : 0.0
+  Verdict  : ✅ SIGNIFICANT
+  Effect   : Small
+
+BQ3: Same-state orders are faster than cross-state
+  H₀: Delivery days are equal for same-state vs cross-state
+  Test     : Mann-Whitney U
+  p-value  : 0.0
+  Verdict  : ✅ SIGNIFICANT
+  Effect   : Large
+
+BQ4: Review scores differ across payment types
+  H₀: Review scores are equal across all payment types
+  Test     : Kruskal-Wallis
+  p-value  : 7e-06
+  Verdict  : ✅ SIGNIFICANT
+  Effect   : Negligible
+
+BQ5: Long-distance orders have higher freight cost
+  H₀: Freight value is equal for long vs short distance orders
+  Test     : Mann-Whitney U
+  p-value  : 0.0
+  Verdict  : ✅ SIGNIFICANT
+  Effect   : Large
+
+BQ6: Weekend purchases have different review scores
+  H₀: Review scores are equal for weekend vs weekday purchases
+  Test     : Mann-Whitney U
+  p-value  : 0.121874
+  Verdict  : ❌ NOT SIGNIFICANT
+  Effect   : Negligible
+
+BQ7: Payment type and order status are associated
+  H₀: Payment type and order status are independent
+  Test     : Chi-Square
+  p-value  : 0.0
+  Verdict  : ✅ SIGNIFICANT
+  Effect   : Negligible
+
+────────────────────────────────────────────────────────────
+KEY INSIGHTS (Significant + Large/Medium effect)
+────────────────────────────────────────────────────────────
+  ★ BQ1: Late deliveries lower review scores (effect=Large)
+  ★ BQ3: Same-state orders are faster than cross-state (effect=Large)
+  ★ BQ5: Long-distance orders have higher freight cost (effect=Large)
+
+────────────────────────────────────────────────────────────
+NEXT STEPS → Day 7: NLP on Review Text
+  TF-IDF features from Portuguese review text
+  Sentiment polarity per review_score group
+────────────────────────────────────────────────────────────

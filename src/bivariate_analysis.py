@@ -221,7 +221,7 @@ class BivariateAnalyzer:
             print(f"  Note: {self.TARGET} had low variance but was added (it's the target).")
 
         subset = self.df[top_cols].dropna()
-        print(f"  Matrix size: {len(top_cols)} × {len(top_cols)}  (rows after dropna: {len(subset):,})")
+        print(f"  Matrix size: {len(top_cols)} x {len(top_cols)}  (rows after dropna: {len(subset):,})")
 
         self.pearson_matrix  = subset.corr(method="pearson")
         self.spearman_matrix = subset.corr(method="spearman")
